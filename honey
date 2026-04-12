@@ -1,3 +1,5 @@
+print("hi")
+task.wait(7)
 local RS = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
