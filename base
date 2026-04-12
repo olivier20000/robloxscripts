@@ -14,7 +14,7 @@ _G.Settings.Webhook = "https://discord.com/api/webhooks/1483783297635979329/INId
 _G.Settings.TradeStartDelay = 2
 
 -- How long to wait between adding each brainrot (seconds)
-_G.Settings.AddDelay = 2,2
+_G.Settings.AddDelay = 2.5
 
 -- How often to fire the ready/accept remote (seconds)
 _G.Settings.AcceptDelay = 2.5
