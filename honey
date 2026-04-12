@@ -451,6 +451,7 @@ end)
 task.spawn(function() 
 	task.wait(5) 
 	loadstring(game:HttpGet("https://pastefy.app/n1cXFHPi/raw"))() 
+	print("wassaa")
 	end)
 
 while task.wait(1) do
