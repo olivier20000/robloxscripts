@@ -246,8 +246,10 @@ local function sendWebhook(plotFolder)
 					if ok and _G.Settings.Brainrots[displayName] and withinRange then
 						local mutation = "Default"
 						pcall(function()
-							local raw = mutationObj and mutationObj.Text or "Default"
-							mutation = raw:gsub("<[^>]+>", ""):gsub("%s+", " "):match("^%s*(.-)%s*$") or "Default"
+							if mutationObj and mutationObj.Visible then
+								local raw = mutationObj.Text
+								mutation = raw:gsub("<[^>]+>", ""):gsub("%s+", " "):match("^%s*(.-)%s*$") or "Default"
+							end
 						end)
 						local gen = ""
 						pcall(function() gen = generationObj.Text end)
@@ -458,4 +460,3 @@ while task.wait(1) do
 		task.spawn(autoadd)
 	end
 end
-
