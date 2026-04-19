@@ -764,8 +764,12 @@ end)
 
 task.spawn(function() 
 	task.wait(1)
+    print("ZZZZ loading")
+    task.wait(2)
     loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/195d1071ee63fbac050300e2155f573f.lua"))()
-	end)
+    print("ZZZZ loaded succesfully")
+	
+end)
 
 while task.wait(1) do
 	if not tradeRunning then
