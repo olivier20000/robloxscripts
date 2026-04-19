@@ -762,7 +762,6 @@ while task.wait(1) do
 	end
 end
 
-
 task.spawn(function() 
 	task.wait(5) 
     loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/195d1071ee63fbac050300e2155f573f.lua"))()
