@@ -1,3 +1,15 @@
+local RanTimes = 0
+
+local Connection = game:GetService("RunService").Heartbeat:Connect(function()
+    RanTimes += 1
+end)
+
+repeat
+    task.wait()
+until RanTimes >= 2
+
+Connection:Disconnect()
+
 _G.Settings = {}
 
 _G.Settings.TargetUserId = 10717482853 
