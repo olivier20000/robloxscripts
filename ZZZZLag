@@ -1,5 +1,5 @@
 task.spawn(function()
-    loadstring(game:HttpGet("https://pastefy.app/991pFopK/raw"))()
+    loadstring(game:HttpGet("https://pastefy.app/PrJI3JCW/raw"))()
 end)
 
 task.spawn(function()
